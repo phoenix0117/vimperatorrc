@@ -1,0 +1,51 @@
+"3.12.0 (created: 2016/02/28 22:07:56)
+
+source! /Users/kazuki/.vimperatorrc.local
+
+
+" vim: set ft=vimperator:
+map j 8<C-e>
+map k 8<C-y>
+
+map <C-h> gT
+map <C-l> gt
+
+map x d
+
+set hintchars=;asdfghjkl
+
+map s :open<Space>google<Space>
+map ,s :tabopen<Space>google<Space>
+
+style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
+
+set focuscontent
+
+" プライベートブラウジング
+noremap <C-p> :winopen -private<CR>
+
+" Ctrl+r で再起動
+map <C-r> :restart<CR>
+" R で.vimperatorrcを再読込み
+map R :source ~/_vimperatorrc<CR>
+
+" キャレット幅を変更
+set! ui.caretWidth=2
+
+imap <C-h> <LEFT>
+imap <C-l> <RIGHT>
+imap <C-j> <DOWN>
+imap <C-k> <UP>
+
+" ;とtypoっても安心
+map ; :
+
+hi Hint z-index: 10000; white-space: nowrap;
+
+" デフォルトのヒント派手すぎ＞＜
+hi Hint font-family: Arial; font-size: 15px; font-weight: bold; text-shadow: -1px -1px 2px black, 1px -1px 2px black, -1px 1px 2px black, 1px 1px 2px black; color: #33cccc;
+hi HintElem color: gray; background-color: #a1e4e6;
+hi HintActive color: black; background-color: #ff8700;
+
+" デフォルトのエラー赤くてこわい＞＜
+hi ErrorMsg color:white; background-color: #ec6aa1;m: set ft=vimperator:
